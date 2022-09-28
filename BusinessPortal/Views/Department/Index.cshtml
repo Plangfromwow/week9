@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Department>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Departments</h1>
+
+<table>
+
+    <thead>
+        <tr>
+            <th>Department</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Department dep in Model)
+        {
+            <tr>
+            <td>@dep.name</td>
+                <td>
+                    <a href="/department/detail?id=@dep.id">Detail</a>
+                    <a href="/department/delete?id=@dep.id">Delete</a>
+                    <a href="/department/edit?id=@dep.id">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/department/addform">Add New Department</a>
