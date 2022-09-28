@@ -2,8 +2,8 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>CoffeeShop Items!</h1>
+<h1 style="color:blueviolet;">Coffee Shop Items!</h1>
 
 @foreach(Product prod in Model){
-    <div>@prod.name - $@prod.price</div>
+    <div><a style="text-decoration:none;font-weight:bold;"href="/product/detail?id=@prod.id">@prod.name</a> - $@prod.price</div>
 }
