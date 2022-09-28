@@ -1,0 +1,9 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>CoffeeShop Items!</h1>
+
+@foreach(Product prod in Model){
+    <div>@prod.name - $@prod.price</div>
+}
